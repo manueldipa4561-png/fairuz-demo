@@ -288,3 +288,168 @@ img.image-fallback{
   .motion-showcase__light{animation:none}
   .motion-showcase__image{transition:none;transform:scale(1.035)}
 }
+
+
+/* Step 4 — Events + Food Truck experience */
+.event-hero--foodtruck{min-height:100svh}
+.event-hero--foodtruck .hero-media{object-position:center 52%}
+.event-hero__shade{
+  background:
+    linear-gradient(90deg,rgba(7,31,37,.78) 0%,rgba(7,31,37,.30) 48%,rgba(7,31,37,.16) 72%,rgba(7,31,37,.28) 100%),
+    linear-gradient(0deg,rgba(7,31,37,.62),transparent 54%);
+}
+.event-hero__meta{
+  position:absolute;
+  right:4vw;
+  bottom:8vh;
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:6px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.42);
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:rgba(255,255,255,.7);
+}
+
+.event-format-heading{max-width:860px;margin-bottom:72px}
+.event-format-heading h2,
+.foodtruck-feature__content h2,
+.event-value__heading h2,
+.event-process__heading h2{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(58px,6.6vw,104px);
+  line-height:.94;
+  letter-spacing:-.038em;
+  margin:22px 0 0;
+}
+.event-format-heading h2 em,
+.foodtruck-feature__content h2 em,
+.event-value__heading h2 em,
+.event-process__heading h2 em{font-style:italic;color:var(--brand-teal)}
+
+.event-format-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.event-format-card{
+  min-height:420px;
+  padding:28px 30px 30px 0;
+  border-right:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.event-format-card+article{padding-left:30px}
+.event-format-card:last-child{border-right:0}
+.event-format-card__number,
+.event-format-card__label{
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.event-format-card__number{color:var(--brand-teal)}
+.event-format-card__label{margin:0 0 12px;color:#6d8387}
+.event-format-card h3{font-family:var(--serif);font-size:42px;line-height:1;font-weight:600;margin:0 0 18px}
+.event-format-card p:not(.event-format-card__label){font-size:13px;line-height:1.75;color:#5e7074;max-width:320px}
+.event-format-card>a{align-self:flex-end;font-family:var(--serif);font-size:38px;line-height:1;color:var(--brand-teal);transition:transform .25s ease}
+.event-format-card>a:hover{transform:translate(4px,4px)}
+
+.foodtruck-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  min-height:88vh;
+  background:var(--brand-petrol);
+  color:#fff;
+}
+.foodtruck-feature__media{position:relative;min-height:88vh;overflow:hidden;background:#092f38}
+.foodtruck-feature__media img{height:100%;object-fit:cover;object-position:center}
+.foodtruck-feature__media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent 68%,rgba(18,59,69,.24));
+  pointer-events:none;
+}
+.foodtruck-feature__tag{
+  position:absolute;
+  left:28px;
+  bottom:24px;
+  z-index:2;
+  padding:10px 13px;
+  border:1px solid rgba(255,255,255,.45);
+  background:rgba(9,43,51,.30);
+  backdrop-filter:blur(8px);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.18em;
+}
+.foodtruck-feature__content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:9vw 7vw;
+}
+.foodtruck-feature__content h2 em{color:#dcebed}
+.foodtruck-feature__content>p:not(.section-kicker){font-size:17px;line-height:1.82;color:rgba(255,255,255,.82);margin:0;max-width:560px}
+.foodtruck-points{margin:48px 0 42px;border-top:1px solid rgba(255,255,255,.17)}
+.foodtruck-points>div{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.foodtruck-points span{font-size:8px;letter-spacing:.16em;color:var(--brand-aqua)}
+.foodtruck-points p{font-size:12px;line-height:1.65;margin:0;color:rgba(255,255,255,.68)}
+.event-outline-button{align-self:flex-start;border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+.event-outline-button:hover{background:var(--brand-ivory);color:var(--brand-petrol)}
+
+.event-mosaic{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  grid-template-rows:1fr 1fr;
+  min-height:90vh;
+  background:#082d35;
+  gap:1px;
+}
+.event-mosaic figure{margin:0;overflow:hidden;background:#123b45}
+.event-mosaic img{width:100%;height:100%;object-fit:cover}
+.event-mosaic__wide{grid-row:1/3;min-height:90vh}
+.event-mosaic__food,.event-mosaic__detail{min-height:45vh}
+
+.event-value{background:var(--brand-petrol);color:#fff}
+.event-value__heading{max-width:860px;margin-bottom:74px}
+.event-value__heading .section-kicker{color:var(--brand-aqua)}
+.event-value__heading h2 em{color:#dcebed}
+.event-value-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.18)}
+.event-value-grid article{padding:30px 28px 26px 0;border-right:1px solid rgba(255,255,255,.14)}
+.event-value-grid article+article{padding-left:28px}
+.event-value-grid article:last-child{border-right:0}
+.event-value-grid span{font-size:8px;letter-spacing:.15em;color:var(--brand-aqua)}
+.event-value-grid h3{font-family:var(--serif);font-size:29px;line-height:1.05;margin:32px 0 10px;font-weight:600}
+.event-value-grid p{font-size:12px;line-height:1.7;color:rgba(255,255,255,.62);margin:0}
+
+.event-process__heading{max-width:780px;margin-bottom:68px}
+.process-grid--event{margin-top:0}
+.event-process__note{margin:18px 0 0;font-size:10px;color:#6c7f83}
+.events-page .event-big-cta{transition:color .25s ease,padding .25s ease}
+.events-page .event-big-cta:hover{padding-left:12px;padding-right:12px}
+
+@media(max-width:900px){
+  .event-hero--foodtruck .hero-media{object-position:58% center}
+  .event-hero__meta{display:none}
+  .event-format-heading{margin-bottom:48px}
+  .event-format-grid{grid-template-columns:1fr}
+  .event-format-card,.event-format-card+article{min-height:290px;padding:26px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .event-format-card:last-child{border-bottom:0}
+  .foodtruck-feature{grid-template-columns:1fr;min-height:auto}
+  .foodtruck-feature__media{min-height:64vh}
+  .foodtruck-feature__content{padding:88px 22px 94px}
+  .foodtruck-feature__content h2,
+  .event-format-heading h2,
+  .event-value__heading h2,
+  .event-process__heading h2{font-size:clamp(54px,14vw,78px)}
+  .event-mosaic{grid-template-columns:1fr;grid-template-rows:auto;min-height:0}
+  .event-mosaic__wide,.event-mosaic__food,.event-mosaic__detail{grid-row:auto;min-height:58vh}
+  .event-value__heading{margin-bottom:50px}
+  .event-value-grid{grid-template-columns:1fr}
+  .event-value-grid article,.event-value-grid article+article{padding:24px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .event-value-grid article:last-child{border-bottom:0}
+}
