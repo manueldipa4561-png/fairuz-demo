@@ -1157,3 +1157,236 @@ p{max-width:68ch}
     margin-left:-18px;
   }
 }
+
+
+/* MOBILE UX RESEARCH PASS — content and desktop design preserved */
+
+/* Clean CSS-drawn directional cues: no emoji / unicode arrows. */
+.ui-chevron{
+  --chev-size:8px;
+  display:inline-block;
+  width:var(--chev-size);
+  height:var(--chev-size);
+  border-top:1.5px solid currentColor;
+  border-right:1.5px solid currentColor;
+  flex:0 0 auto;
+  opacity:.78;
+}
+.ui-chevron--ne{transform:rotate(-45deg);margin-left:8px}
+.ui-chevron--se{transform:rotate(45deg)}
+.ui-chevron--down{transform:rotate(135deg);margin-left:8px;margin-bottom:3px}
+.ui-chevron--left{transform:rotate(-135deg)}
+.icon-link{
+  display:grid;
+  place-items:center;
+  color:inherit;
+}
+a:active,.button:active,.menu-toggle:active,.wa-float:active{
+  transform:scale(.985);
+}
+
+@media (max-width:900px){
+  /* Reflow / viewport stability */
+  html{
+    scroll-padding-top:82px;
+    overflow-x:clip;
+  }
+  body{
+    overflow-x:clip;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    touch-action:pan-y;
+  }
+  main{min-width:0}
+  section[id]{scroll-margin-top:82px}
+  a,button{-webkit-tap-highlight-color:rgba(14,122,189,.13)}
+
+  /* Mobile typography: readable widths, balanced headlines, no surprise wrapping */
+  .hero h1,.event-hero h1,
+  .intro h2,.menu-preview h2,.story h2,.reviews h2,.event-intro h2,
+  .events-copy h2,.visit h2,.motion-showcase__content h2,
+  .event-format-heading h2,.foodtruck-feature__content h2,
+  .event-value__heading h2,.event-process__heading h2{
+    text-wrap:balance;
+    overflow-wrap:normal;
+  }
+  .hero-copy,.body-copy,.story-copy,.events-copy>p,
+  .motion-showcase__content>p,.foodtruck-feature__content>p{
+    max-width:32rem;
+  }
+
+  /* 44px+ interaction zones and visible press feedback */
+  .menu-toggle,
+  .nav a,
+  .button,
+  .reviews-links a,
+  .visit-actions>a,
+  .event-format-card>a,
+  .event-big-cta,
+  .wa-float{
+    min-height:44px;
+    touch-action:manipulation;
+  }
+  .menu-toggle:active,
+  .nav a:active,
+  .button:active,
+  .reviews-links a:active,
+  .visit-actions>a:active,
+  .event-format-card>a:active,
+  .event-big-cta:active{
+    opacity:.72;
+  }
+
+  /* Navigation: calmer hierarchy, better thumb reach, less visual noise */
+  .nav{
+    padding-top:max(104px,calc(82px + env(safe-area-inset-top)));
+    padding-bottom:max(34px,calc(26px + env(safe-area-inset-bottom)));
+  }
+  .nav a:not(.nav-cta){
+    min-height:52px;
+    padding:0;
+    font-size:14px;
+  }
+  .nav-cta{
+    width:100%;
+    min-height:54px;
+    margin-top:12px;
+    border-radius:999px;
+    font-family:var(--sans);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+
+  /* Hero: let the film breathe while keeping the call-to-action in easy reach */
+  .hero-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    min-height:100svh;
+  }
+  .hero .eyebrow{margin-bottom:4px}
+  .hero-copy{margin-top:14px}
+  .hero-actions{
+    margin-top:4px;
+    padding-bottom:4px;
+  }
+  .hero-actions .button{
+    min-height:54px;
+    border-radius:999px;
+    font-size:10px;
+    letter-spacing:.12em;
+  }
+  .hero-actions .text-link{
+    min-height:48px;
+    padding:12px 2px;
+    gap:4px;
+  }
+
+  /* Fast-glance fact cards */
+  .quick-facts>div{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    min-height:128px;
+  }
+  .quick-facts strong{
+    margin-top:auto;
+    padding-top:18px;
+  }
+
+  /* More consistent visual rhythm on narrow viewports */
+  .section{padding-top:76px;padding-bottom:76px}
+  .section-kicker{margin-bottom:14px}
+  .body-copy p:last-child{margin-bottom:0}
+  .gallery-copy p{max-width:26rem}
+  .motion-showcase__content{padding-top:70px;padding-bottom:76px}
+  .menu-grid article{min-height:126px}
+  .story-copy{padding-bottom:4px}
+  .review-card{min-height:210px}
+  .review-card footer{align-items:center}
+  .events-copy{max-width:34rem}
+
+  /* Mobile image presentation: editorial crop consistency without altering desktop */
+  .gallery-large img{object-position:center 50%}
+  .gallery-small img{object-position:center 48%}
+  .story-media img{object-position:center 45%}
+  .events-teaser>img{object-position:center 52%}
+  .foodtruck-feature__media img{object-position:center 50%}
+  .event-mosaic img{object-position:center}
+
+  /* Better one-handed bottom CTA behavior and iPhone safe area */
+  .wa-float{
+    left:14px;
+    right:14px;
+    width:auto;
+    min-height:54px;
+    bottom:max(12px,env(safe-area-inset-bottom));
+    border-radius:999px;
+    box-shadow:0 10px 34px rgba(8,42,67,.22);
+    font-size:11px;
+    font-weight:700;
+  }
+  .wa-dot{
+    width:32px;
+    height:32px;
+    flex:0 0 auto;
+  }
+  .footer{
+    padding-bottom:calc(118px + env(safe-area-inset-bottom));
+  }
+
+  /* Make directional UI quieter and consistent */
+  .ui-chevron{--chev-size:7px}
+  .visit-actions .ui-chevron{margin-left:14px}
+  .event-format-card .icon-link{
+    width:48px;
+    height:48px;
+    border:1px solid var(--line);
+    border-radius:50%;
+  }
+
+  /* No accidental text selection on navigational chrome */
+  .site-header,.wa-float,.nav{-webkit-user-select:none;user-select:none}
+}
+
+@media (max-width:480px){
+  .section{padding-top:68px;padding-bottom:68px}
+  .hero h1,.event-hero h1{
+    font-size:clamp(50px,15vw,66px);
+  }
+  .hero-copy,.event-hero-content>p:not(.eyebrow){
+    font-size:14px;
+    line-height:1.62;
+  }
+  .quick-facts{grid-template-columns:1fr 1fr}
+  .quick-facts>div{min-height:120px}
+  .review-card>p{font-size:21px}
+  .events-copy h2,
+  .motion-showcase__content h2,
+  .event-format-heading h2,
+  .foodtruck-feature__content h2,
+  .event-value__heading h2,
+  .event-process__heading h2{
+    font-size:clamp(46px,13vw,64px);
+  }
+}
+
+/* Device-height tuning for smaller phones, content unchanged */
+@media (max-width:900px) and (max-height:720px){
+  .hero-content,.event-hero-content{
+    padding-top:104px;
+    padding-bottom:54px;
+  }
+  .hero h1,.event-hero h1{
+    font-size:clamp(48px,13.5vw,64px);
+    margin-top:10px;
+    margin-bottom:12px;
+  }
+  .hero-copy,.event-hero-content>p:not(.eyebrow){
+    margin-top:10px;
+    margin-bottom:16px;
+  }
+  .hero-actions .button{min-height:48px}
+}

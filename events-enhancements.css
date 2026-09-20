@@ -365,3 +365,35 @@
   .event-ritual-3d__viewport{min-height:48vh}
   .ritual-scene{width:min(76vw,330px)}
 }
+
+
+/* MOBILE UX RESEARCH PASS — 3D page polish */
+@media(max-width:900px){
+  .event-ritual-3d{
+    overflow:clip;
+  }
+  .event-ritual-3d__copy{
+    padding-top:70px;
+  }
+  .event-ritual-3d__viewport{
+    min-height:50vh;
+    max-height:540px;
+    touch-action:pan-y;
+  }
+  .ritual-scene{
+    width:min(68vw,360px);
+    pointer-events:none;
+  }
+  .event-ritual-3d__caption{
+    display:none;
+  }
+  .event-ritual-3d__legend span{
+    min-height:28px;
+    display:inline-flex;
+    align-items:center;
+  }
+}
+@media(max-width:480px){
+  .event-ritual-3d__viewport{min-height:46vh}
+  .ritual-scene{width:min(72vw,310px)}
+}
