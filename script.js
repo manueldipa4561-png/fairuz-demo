@@ -70,3 +70,33 @@ if(motionMedia && motionImage && finePointer.matches && !reducedMotion.matches){
     motionImage.style.setProperty('--motion-y','0px');
   });
 }
+
+
+// FAIRUZ_CINEMATIC_HERO
+const cinematicHero=document.querySelector('[data-hero-cinematic]');
+const cinematicStage=cinematicHero?.querySelector('.hero-cinematic__stage');
+
+if(cinematicHero && cinematicStage){
+  const heroFine=window.matchMedia('(hover:hover) and (pointer:fine)');
+  const heroReduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if(heroFine.matches && !heroReduced.matches){
+    cinematicHero.addEventListener('pointermove',(event)=>{
+      const rect=cinematicHero.getBoundingClientRect();
+      const x=(event.clientX-rect.left)/rect.width-.5;
+      const y=(event.clientY-rect.top)/rect.height-.5;
+
+      cinematicStage.style.setProperty('--hero-ry',`${x*1.35}deg`);
+      cinematicStage.style.setProperty('--hero-rx',`${y*-0.85}deg`);
+      cinematicStage.style.setProperty('--hero-tx',`${x*-5}px`);
+      cinematicStage.style.setProperty('--hero-ty',`${y*-3}px`);
+    },{passive:true});
+
+    cinematicHero.addEventListener('pointerleave',()=>{
+      cinematicStage.style.setProperty('--hero-ry','0deg');
+      cinematicStage.style.setProperty('--hero-rx','0deg');
+      cinematicStage.style.setProperty('--hero-tx','0px');
+      cinematicStage.style.setProperty('--hero-ty','0px');
+    });
+  }
+}

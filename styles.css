@@ -774,3 +774,89 @@ p{max-width:68ch}
   .wa-float{background:var(--brand-blue)}
   .wa-dot{background:#fff;color:var(--brand-blue)}
 }
+
+
+/* Step 6 — cinematic 3D walk-in hero */
+.hero-cinematic{
+  isolation:isolate;
+  perspective:1200px;
+  background:var(--brand-blue-dark);
+}
+.hero-cinematic__stage{
+  --hero-rx:0deg;
+  --hero-ry:0deg;
+  --hero-tx:0px;
+  --hero-ty:0px;
+  position:absolute;
+  inset:-3%;
+  z-index:0;
+  overflow:hidden;
+  transform:
+    perspective(1200px)
+    rotateX(var(--hero-rx))
+    rotateY(var(--hero-ry))
+    translate3d(var(--hero-tx),var(--hero-ty),0)
+    scale(1.045);
+  transform-origin:center center;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  will-change:transform;
+}
+.hero-cinematic__video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  background:var(--brand-blue-dark);
+  filter:saturate(.94) contrast(.99);
+}
+.hero-cinematic__depth{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 76% 32%,rgba(255,255,255,.06),transparent 19%),
+    linear-gradient(90deg,rgba(6,24,34,.34) 0%,rgba(6,24,34,.07) 52%,rgba(6,24,34,.12) 100%);
+  mix-blend-mode:normal;
+}
+.hero-cinematic .hero-shade{z-index:1}
+.hero-cinematic .hero-content,
+.hero-cinematic .hero-badge{z-index:3}
+.hero-cinematic:after{
+  content:"";
+  position:absolute;
+  left:4vw;
+  right:4vw;
+  bottom:24px;
+  height:1px;
+  z-index:3;
+  background:linear-gradient(90deg,var(--brand-red) 0 72px,rgba(255,255,255,.20) 72px 100%);
+  pointer-events:none;
+}
+
+@media(max-width:900px){
+  .hero-cinematic__stage{
+    inset:-1.5%;
+    transform:scale(1.025);
+  }
+  .hero-cinematic__video{
+    object-position:56% center;
+  }
+  .hero-cinematic:after{
+    left:22px;
+    right:22px;
+    bottom:16px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-cinematic__video{display:none}
+  .hero-cinematic__stage{
+    background:
+      url("https://d2ol7oe51mr4n9.cloudfront.net/user_3JN4lq7KBj4c3qEQUgSkbrftgrd/c0cba3d1-3b3c-4040-938b-ca5d315309af.png")
+      center/cover no-repeat;
+    transform:none;
+    transition:none;
+  }
+}
