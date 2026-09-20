@@ -48,3 +48,25 @@ document.querySelectorAll('img').forEach(img=>{
     img.src=fairuzFallbackImage;
   });
 });
+
+
+// FAIRUZ_MOTION_SHOWCASE
+const motionMedia=document.querySelector('[data-motion-media]');
+const motionImage=motionMedia?.querySelector('.motion-showcase__image');
+const finePointer=window.matchMedia('(hover:hover) and (pointer:fine)');
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if(motionMedia && motionImage && finePointer.matches && !reducedMotion.matches){
+  motionMedia.addEventListener('pointermove',(event)=>{
+    const rect=motionMedia.getBoundingClientRect();
+    const px=(event.clientX-rect.left)/rect.width-.5;
+    const py=(event.clientY-rect.top)/rect.height-.5;
+    motionImage.style.setProperty('--motion-x',`${px*-12}px`);
+    motionImage.style.setProperty('--motion-y',`${py*-9}px`);
+  },{passive:true});
+
+  motionMedia.addEventListener('pointerleave',()=>{
+    motionImage.style.setProperty('--motion-x','0px');
+    motionImage.style.setProperty('--motion-y','0px');
+  });
+}
