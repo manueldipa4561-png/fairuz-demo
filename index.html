@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#24161d" />
+  <meta name="description" content="Fairuz Parma — cucina libanese, mezze, barbecue e sapori da condividere." />
+  <title>Fairuz Parma — Cucina Libanese</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Fairuz Parma">
+      <span class="brand-main">Fairuz</span>
+      <span class="brand-sub">Cucina Libanese · Parma</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#esperienza">Esperienza</a>
+      <a href="#menu">Menu</a>
+      <a href="#fairuz">Fairuz</a>
+      <a href="#contatti">Contatti</a>
+      <a class="nav-cta" href="tel:+393715881368">Prenota</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">PARMA · VIA LUIGI VIGOTTI 5</p>
+        <h1 class="reveal delay-1">Il Libano<br><em>da condividere.</em></h1>
+        <p class="hero-copy reveal delay-2">Mezze, brace e profumi libanesi. Un tavolo pensato per assaggiare, condividere e restare.</p>
+        <div class="hero-actions reveal delay-3">
+          <a class="button button-light" href="#menu">Scopri il menu</a>
+          <a class="text-link" href="tel:+393715881368">Prenota un tavolo <span>↗</span></a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="hero-note">
+          <span>01</span>
+          <p>Cucina libanese<br>autentica</p>
+        </div>
+        <div class="hero-note">
+          <span>02</span>
+          <p>Mezze &amp;<br>barbecue</p>
+        </div>
+        <div class="hero-note">
+          <span>03</span>
+          <p>Halal · vegan<br>vegetarian</p>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#esperienza" aria-label="Scorri alla sezione successiva">
+        <span>SCOPRI</span><span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <section class="manifesto section" id="esperienza">
+      <div class="section-kicker reveal">WELCOME TO LEBANON</div>
+      <div class="manifesto-grid">
+        <h2 class="reveal">Non un piatto.<br><em>Un tavolo intero.</em></h2>
+        <div class="manifesto-copy reveal delay-1">
+          <p>La cucina libanese comincia dalla condivisione: hummus al centro, pane caldo, verdure, spezie e piatti che arrivano uno dopo l'altro.</p>
+          <p>Fairuz porta questa ritualità a Parma con mezze fredde e calde, grigliate al carbone e sapori netti, generosi, riconoscibili.</p>
+        </div>
+      </div>
+
+      <div class="feature-strip reveal">
+        <article>
+          <span class="feature-number">01</span>
+          <h3>Mezze</h3>
+          <p>Piccoli piatti, grandi contrasti. Cremoso, fresco, croccante, speziato.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <h3>Fuoco</h3>
+          <p>Carni marinate e spiedini cotti al carbone, serviti senza distrazioni.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <h3>Condivisione</h3>
+          <p>Il modo più semplice per conoscere il Libano: ordinare insieme e assaggiare tutto.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="image-break" aria-label="Piatti Fairuz">
+      <div class="image-break-copy reveal">
+        <p class="eyebrow">MEZZE / PARMA</p>
+        <h2>Comincia<br>dal centro.</h2>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="menu-heading">
+        <div>
+          <p class="section-kicker reveal">UNA SELEZIONE DAL MENU</p>
+          <h2 class="reveal">Cosa arriva<br><em>a tavola.</em></h2>
+        </div>
+        <p class="menu-intro reveal delay-1">Una selezione pensata per il prototipo. Prezzi e disponibilità possono variare: in sala trovi il menu completo.</p>
+      </div>
+
+      <div class="menu-tabs reveal" role="tablist" aria-label="Categorie menu">
+        <button class="menu-tab active" data-target="mezze" role="tab" aria-selected="true">Mezze</button>
+        <button class="menu-tab" data-target="grill" role="tab" aria-selected="false">Barbecue</button>
+        <button class="menu-tab" data-target="dolci" role="tab" aria-selected="false">Dolci &amp; vino</button>
+      </div>
+
+      <div class="menu-panels reveal">
+        <div class="menu-panel active" id="mezze">
+          <div class="dish"><div><h3>Hummus</h3><p>Ceci, tahina, limone e aglio</p></div><span>€7</span></div>
+          <div class="dish"><div><h3>Fattoush</h3><p>Insalata, pane fritto e melassa di melograno</p></div><span>€7</span></div>
+          <div class="dish"><div><h3>Muhammara</h3><p>Peperoni rossi, noci, tahina e melassa di melograno</p></div><span>€7</span></div>
+          <div class="dish"><div><h3>Mutabbal</h3><p>Melanzane al carbone, tahina, limone e aglio</p></div><span>€7</span></div>
+          <div class="dish"><div><h3>Falafel</h3><p>Fave, ceci, erbe fresche e aromi libanesi</p></div><span>€8</span></div>
+          <div class="dish"><div><h3>Batata Harra</h3><p>Patate, coriandolo, aglio e peperoncino</p></div><span>€7</span></div>
+        </div>
+
+        <div class="menu-panel" id="grill">
+          <div class="dish"><div><h3>Misto BBQ</h3><p>Pollo rosso, pollo bianco, sojok e kafta</p></div><span>€20</span></div>
+          <div class="dish"><div><h3>Tawook Rosso</h3><p>Spiedini di pollo marinato cotti al carbone</p></div><span>€18</span></div>
+          <div class="dish"><div><h3>Kafta</h3><p>Vitello, prezzemolo e cipolla alla brace</p></div><span>€18</span></div>
+          <div class="dish"><div><h3>Hallumi</h3><p>Formaggio grigliato, miele e pistacchio</p></div><span>€16</span></div>
+          <div class="dish"><div><h3>Vitello Angus</h3><p>Spiedini di Angus marinato cotti al carbone</p></div><span>€20</span></div>
+          <div class="dish"><div><h3>Sojok</h3><p>Spiedini di vitello marinato alla brace</p></div><span>€18</span></div>
+        </div>
+
+        <div class="menu-panel" id="dolci">
+          <div class="dish"><div><h3>Baklawa</h3><p>Pasta fillo, frutta secca e profumi d'Oriente</p></div><span>—</span></div>
+          <div class="dish"><div><h3>Vini libanesi</h3><p>Etichette selezionate dal Libano</p></div><span>—</span></div>
+          <div class="dish"><div><h3>Caffè &amp; fine pasto</h3><p>Per chiudere lentamente</p></div><span>—</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section" id="fairuz">
+      <div class="story-image reveal">
+        <img src="https://images.happycow.net/venues/1024/35/97/hcmp359766_3909640.jpeg" alt="Ingresso del ristorante Fairuz a Parma" loading="lazy">
+      </div>
+      <div class="story-copy">
+        <p class="section-kicker reveal">FAIRUZ · PARMA</p>
+        <h2 class="reveal">Una porta<br><em>sul Libano.</em></h2>
+        <p class="reveal delay-1">In Via Luigi Vigotti 5, Fairuz è un ristorante libanese costruito intorno a ospitalità, mezze, barbecue e piatti adatti anche a scelte halal, vegetariane e vegane.</p>
+        <div class="story-stats reveal delay-2">
+          <div><strong>4,7</strong><span>Tripadvisor</span></div>
+          <div><strong>Tue</strong><span>Giorno di chiusura</span></div>
+          <div><strong>PR</strong><span>Parma</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="contatti">
+      <div class="visit-top section">
+        <p class="section-kicker light reveal">VIENI A TROVARCI</p>
+        <div class="visit-grid">
+          <h2 class="reveal">Ci vediamo<br><em>a tavola.</em></h2>
+          <div class="visit-details reveal delay-1">
+            <div>
+              <span>DOVE</span>
+              <p>Via Luigi Vigotti 5<br>43126 Parma</p>
+            </div>
+            <div>
+              <span>QUANDO</span>
+              <p>Pranzo &amp; cena<br>Martedì chiuso</p>
+            </div>
+            <div>
+              <span>CONTATTI</span>
+              <p><a href="tel:+393715881368">+39 371 588 1368</a><br><a href="mailto:fairuzparmasrl@gmail.com">fairuzparmasrl@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit-actions">
+        <a href="tel:+393715881368">
+          <span>Prenota un tavolo</span>
+          <span class="arrow">↗</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Fairuz+Via+Luigi+Vigotti+5+Parma" target="_blank" rel="noreferrer">
+          <span>Apri su Maps</span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">Fairuz</div>
+    <div class="footer-arabic">فيروز</div>
+    <p>Concept demo · Punto Due Studio</p>
+    <p class="prototype-note">Prototipo non ufficiale. Immagini e informazioni ricavate da listing pubblici; nella versione finale si utilizzano asset e dati approvati dal cliente.</p>
+  </footer>
+
+  <div class="mobile-cta">
+    <a href="tel:+393715881368">Prenota <span>↗</span></a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
