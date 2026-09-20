@@ -148,3 +148,13 @@ p{max-width:72ch}
   .hero-content{padding-left:6vw}
   .real-gallery{grid-template-columns:1.42fr .58fr}
 }
+
+/* Step 2 — resilient remote imagery */
+img{background:#dce5e3}
+img.image-fallback{
+  display:block;
+  min-height:280px;
+  background:
+    linear-gradient(135deg,rgba(18,59,69,.92),rgba(22,135,154,.48)),
+    #dce5e3;
+}
