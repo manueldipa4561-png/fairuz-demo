@@ -33,3 +33,18 @@ const header=document.querySelector('.site-header');
 const onScroll=()=>header?.classList.toggle('scrolled',window.scrollY>36);
 onScroll();
 window.addEventListener('scroll',onScroll,{passive:true});
+
+
+// FAIRUZ_IMAGE_FALLBACK
+const fairuzFallbackImage='https://images.happycow.net/venues/1024/35/97/hcmp359766_3909640.jpeg';
+document.querySelectorAll('img').forEach(img=>{
+  img.addEventListener('error',()=>{
+    if(img.dataset.fallbackTried==='1'){
+      img.classList.add('image-fallback');
+      img.removeAttribute('src');
+      return;
+    }
+    img.dataset.fallbackTried='1';
+    img.src=fairuzFallbackImage;
+  });
+});
