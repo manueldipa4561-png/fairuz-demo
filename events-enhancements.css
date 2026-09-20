@@ -258,3 +258,65 @@
   .ritual-ring--inner,
   .ritual-orb{animation:none}
 }
+
+
+/* Step 5 — recolor 3D ritual from real Fairuz logo */
+.event-hero--foodtruck .hero-shade{
+  background:
+    linear-gradient(90deg,rgba(8,42,67,.82) 0%,rgba(8,42,67,.36) 48%,rgba(8,42,67,.12) 74%,rgba(8,42,67,.24) 100%),
+    linear-gradient(0deg,rgba(8,42,67,.60),transparent 58%);
+}
+.event-ritual-3d{
+  background:#082A43;
+}
+.event-ritual-3d__viewport{
+  background:
+    radial-gradient(circle at 50% 42%,rgba(14,122,189,.18),transparent 28%),
+    radial-gradient(circle at 50% 52%,rgba(216,108,120,.07),transparent 42%),
+    #0A3654;
+}
+.event-ritual-3d__halo{
+  border-color:rgba(185,221,244,.14);
+  box-shadow:
+    0 0 0 80px rgba(185,221,244,.025),
+    0 0 0 160px rgba(185,221,244,.014);
+}
+.event-ritual-3d__copy h2 em{color:#DCECF8}
+.event-ritual-3d__legend span{
+  border-color:rgba(185,221,244,.20);
+}
+.ritual-platter{
+  background:
+    radial-gradient(circle at 40% 34%,rgba(255,255,255,.52),transparent 6%),
+    radial-gradient(circle at 50% 50%,#FBF8F2 0 55%,#DDE7ED 56% 69%,#FFFFFF 70% 100%);
+  box-shadow:
+    inset 0 -18px 26px rgba(14,122,189,.10),
+    0 42px 70px rgba(0,0,0,.24);
+}
+.ritual-platter__rim{
+  border-color:rgba(14,122,189,.24);
+}
+.ritual-bowl--olive span{
+  background:radial-gradient(circle at 38% 32%,#8EC7E8,#0E7ABD 72%);
+}
+.ritual-bowl--pomegranate span{
+  background:radial-gradient(circle at 38% 32%,#E7929B,#A63E4B 72%);
+}
+.ritual-bowl--brass span{
+  background:radial-gradient(circle at 38% 32%,#F0F5F8,#9BBED6 72%);
+}
+.ritual-ring{
+  border-color:rgba(14,122,189,.78);
+}
+.ritual-ring--inner{
+  border-color:rgba(216,108,120,.60);
+}
+.ritual-orb{
+  background:radial-gradient(circle at 30% 28%,#FFFFFF,#79B8DF 64%,#0E7ABD);
+}
+.ritual-seed{
+  background:radial-gradient(circle at 30% 30%,#E7929B,#A63E4B 70%);
+}
+.ritual-leaf{
+  background:linear-gradient(90deg,#B9DDF4,#0E7ABD);
+}
